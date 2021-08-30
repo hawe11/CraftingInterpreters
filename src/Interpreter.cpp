@@ -22,7 +22,7 @@ Interpreter::Interpreter()
 {
     shared_ptr<Callable> clockfun{new ClockFunction};
     Object obj_fun = Object::make_func_object(clockfun);
-    //globals->define("clock",obj_fun);
+    globals->define("clock",obj_fun);
 }
 
 void Interpreter::interpret(vector<shared_ptr<Stmt>> statementes)
